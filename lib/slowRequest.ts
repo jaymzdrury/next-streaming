@@ -1,7 +1,9 @@
-export function slowRequest(data: string, delay: number): Promise<string> {
+import { Data, DataString } from "@/types";
+
+export function slowRequest(props: Data): Promise<DataString> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(data);
-    }, delay);
+      resolve(props.title);
+    }, props.delay);
   });
 }
