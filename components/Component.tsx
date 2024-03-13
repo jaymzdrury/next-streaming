@@ -1,7 +1,8 @@
 import { slowRequest } from "@/lib/slowRequest";
+import { Data } from "@/types";
 
-async function Component({ title, delay }: { title: string; delay: number }) {
-  const data = await slowRequest(title, delay);
+async function Component(props: Data): Promise<JSX.Element> {
+  const data = await slowRequest(props);
   return <p>{data}</p>;
 }
 

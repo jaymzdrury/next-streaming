@@ -1,7 +1,7 @@
 import Component from "@/components/Component";
 import { Suspense } from "react";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <main>
       <Suspense fallback={<p>Loading...</p>}>
